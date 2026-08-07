@@ -3,49 +3,95 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
 
     <title>SOHN</title>
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        rel="preconnect"
+        href="https://fonts.googleapis.com"
+    >
 
     <link
-        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@1,400&display=swap"
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin
+    >
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;500&display=swap"
         rel="stylesheet"
     >
 
-    <link rel="stylesheet" href="main.css">
+    <link
+        rel="stylesheet"
+        href="style.css"
+    >
 </head>
 
 <body>
 
-    <main>
+    <main class="home">
 
-        <!-- HERO -->
-        <section class="hero">
-            <img
-                src="assets/sohn-logo.svg"
-                alt="SOHN"
-                class="logo"
+        <section
+            class="hero"
+            id="hero"
+        >
+
+            <button
+                class="logo-button"
+                id="logoButton"
+                type="button"
+                aria-label="Open navigation"
+                aria-expanded="false"
             >
-        </section>
+                <img
+                    src="assets/sohn-logo.svg"
+                    alt="SOHN"
+                    class="logo"
+                >
+            </button>
 
-        <!-- QUOTE -->
-        <section class="quote-section">
-            <p class="intro-line">
-                See what you find.
-            </p>
-        </section>
 
-        <!-- CONTENT -->
-        <section class="content-section">
+            <nav
+                class="main-menu"
+                aria-label="Main navigation"
+            >
+                <a href="/mixes/">
+                    MIX
+                </a>
 
-            <!-- 나중에 여기에 Mix / Archive 등을 넣을 예정 -->
+                <a href="/archive/">
+                    ARCHIVE
+                </a>
+
+                <a href="/contact/">
+                    CONTACT
+                </a>
+            </nav>
 
         </section>
 
     </main>
+
+
+    <script>
+        const hero = document.getElementById("hero");
+        const logoButton = document.getElementById("logoButton");
+
+        logoButton.addEventListener("click", () => {
+            const isOpen = hero.classList.toggle("menu-open");
+
+            logoButton.setAttribute(
+                "aria-expanded",
+                isOpen
+            );
+        });
+    </script>
 
 </body>
 

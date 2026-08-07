@@ -1,0 +1,109 @@
+/* -------------------------
+   RESET
+------------------------- */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: #F8F7F3;
+    color: #111111;
+}
+
+
+/* -------------------------
+   HERO
+------------------------- */
+
+.hero {
+    width: 100%;
+    height: 100svh;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.logo {
+    width: 320px;
+    height: auto;
+    display: block;
+}
+
+
+/* -------------------------
+   QUOTE
+------------------------- */
+
+.quote-section {
+    width: 100%;
+    height: 100svh;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.intro-line {
+    font-family: "Cormorant Garamond", Georgia, serif;
+
+    font-size: 30px;
+    font-weight: 400;
+    font-style: italic;
+
+    line-height: 1.3;
+    letter-spacing: 0;
+
+    color: #202020;
+}
+
+
+/* -------------------------
+   CONTENT
+------------------------- */
+
+.content-section {
+    width: 100%;
+    min-height: 100svh;
+}
+
+
+/* -------------------------
+   TABLET
+------------------------- */
+
+@media (max-width: 1024px) {
+
+    .logo {
+        width: 220px;
+    }
+
+    .intro-line {
+        font-size: 27px;
+    }
+
+}
+
+
+/* -------------------------
+   MOBILE
+------------------------- */
+
+@media (max-width: 600px) {
+
+    .logo {
+        width: 170px;
+    }
+
+    .intro-line {
+        font-size: 24px;
+    }
+
+}

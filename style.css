@@ -67,20 +67,16 @@ body {
 }
 
 .logo {
-    display: block;
-
     width: 320px;
-    height: auto;
-
-    color:#D97A2B;
-
     opacity: 1;
-
-    transform: scale(1);
-
     transition:
         opacity 0.7s ease,
         transform 0.9s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.hero.menu-open .logo {
+    opacity: 0.14;
+    transform: scale(1.55);
 }
 
 
